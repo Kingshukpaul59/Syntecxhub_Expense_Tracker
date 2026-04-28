@@ -1,34 +1,33 @@
-# 💸 ExpenseTrack
+# 💸 Expense Tracker
 
-A responsive, production-grade **Expense Tracker** built with React, showcasing all core React hooks with a sleek dark UI.
-
----
-
-## ✨ Features
-
-- **Add & delete** transactions (income or expense)
-- **Live summary stats** — net balance, total income, total expenses
-- **Search & filter** transactions in real time
-- **Mock API** integration via JSONPlaceholder on first load
-- **Persistent storage** via localStorage
-- **Toast notifications** for user feedback
-- Fully **responsive** (mobile-first)
+A simple and responsive expense tracker built using React.  
+This project helps track daily expenses and income while practicing core React concepts.
 
 ---
 
-## 🪝 React Hooks Used
+## Features
 
-| Hook | Purpose |
-|------|---------|
-| `useState` | Form inputs, expense list, loading, search, filter, toast |
-| `useEffect` | Fetch mock data from API on mount; persist to localStorage |
-| `useRef` | Abort controller for fetch; auto-focus form field after submit |
-| `useMemo` | Derived stats (balance, income, expenses); filtered list |
-| `useCallback` | Stable event handlers to prevent unnecessary re-renders |
+- Add and delete transactions  
+- Track income and expenses separately  
+- View total balance, income, and expenses  
+- Search and filter transactions  
+- Data persists using localStorage  
+- Initial data loaded from a mock API  
+- Responsive design for mobile and desktop  
 
 ---
 
-## 📁 Folder Structure
+## React Hooks Used
+
+- **useState** – manage form inputs and expense list  
+- **useEffect** – load data and store it in localStorage  
+- **useRef** – handle input focus  
+- **useMemo** – calculate totals efficiently  
+- **useCallback** – optimize performance  
+
+---
+
+## Project Structure
 
 ```
 expense-tracker/
@@ -36,75 +35,62 @@ expense-tracker/
 │   └── index.html
 ├── src/
 │   ├── components/
-│   │   ├── ExpenseForm.js   ← useRef, useCallback
-│   │   ├── ExpenseList.js   ← Pure list renderer
-│   │   └── ExpenseItem.js   ← React.memo + useCallback
-│   ├── App.js               ← All hooks orchestrated here
+│   │   ├── ExpenseForm.js
+│   │   ├── ExpenseList.js
+│   │   └── ExpenseItem.js
+│   ├── App.js
 │   ├── index.js
 │   └── styles.css
-├── vercel.json
 ├── package.json
+├── vercel.json
 └── .gitignore
 ```
 
 ---
 
-## 🚀 Local Development
+## Run Locally
 
-```bash
-# 1. Install dependencies
+Install dependencies:
+```
 npm install
+```
 
-# 2. Start dev server
+Start the project:
+```
 npm start
+```
 
-# 3. Open in browser
+Open in browser:
+```
 http://localhost:3000
 ```
 
 ---
 
-## ▲ Deploy to Vercel
+## Deployment
 
-### Option A — Vercel CLI
+You can deploy this project using Vercel.
 
-```bash
-# Install Vercel CLI globally
-npm i -g vercel
+Push your project to GitHub, then import it in Vercel and deploy.
 
-# Deploy from project root
+Or use CLI:
+```
+npm install -g vercel
 vercel
-
-# Follow prompts → your app is live!
 ```
 
-### Option B — Vercel Dashboard (recommended for beginners)
+---
 
-1. Push this project to a **GitHub / GitLab / Bitbucket** repository
-2. Go to [vercel.com](https://vercel.com) → **New Project**
-3. Import your repository
-4. Vercel auto-detects **Create React App** — no config needed
-5. Click **Deploy** → done ✅
+## Tech Stack
 
-The `vercel.json` included handles client-side routing so all routes resolve correctly.
+- React  
+- JavaScript  
+- CSS  
+- JSONPlaceholder (mock API)  
+- Vercel  
 
 ---
 
-## 🛠️ Tech Stack
+## About
 
-- **React 18** — UI library
-- **Create React App** — build tooling
-- **JSONPlaceholder** — mock REST API
-- **Google Fonts** — Syne + DM Mono
-- **Vercel** — deployment platform
-
----
-
-## 📸 Design
-
-Dark editorial aesthetic with:
-- Indigo/violet accent system
-- Monospace data typography
-- Smooth slide-in animations
-- Color-coded categories
-- Responsive 2-column → 1-column layout
+This project was built for learning React hooks and understanding how to manage state, side effects, and component structure in a real-world style application.
